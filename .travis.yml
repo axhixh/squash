@@ -1,0 +1,13 @@
+sudo: required
+
+language: go
+
+go:
+    - 1.9
+
+services:
+    - docker
+
+before_script:
+    - go get -u github.com/golang/dep/cmd/dep
+    - dep ensure
